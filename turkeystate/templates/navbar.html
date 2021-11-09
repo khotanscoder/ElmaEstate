@@ -1,0 +1,40 @@
+{% load static %}
+<section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+                    <img width="70px" img length="60px" src="static/images/elma.png">
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                         {% comment %}<li><a href="{% url 'realstate' %}">realestates</a></li>{% endcomment %}
+                         <li><a href="{% url 'projects' %}">Projects</a></li>
+                         <li><a href="{% url 'services' %}">Services</a></li>
+
+<!--                         {% comment %}-->
+<!--                         <li class="dropdown">-->
+<!--                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>-->
+
+<!--                              <ul class="dropdown-menu">-->
+<!--                                   {% comment %}<li><a href="{% url 'blog-posts' %}">Blog</a></li>-->
+<!--                                   <li><a href="{% url 'about' %}">About Us</a></li>-->
+<!--                                   <li><a href="{% url 'team' %}">Team</a></li>-->
+<!--                                   <li><a href="{% url 'testimonials' %}">Testimonials</a></li>-->
+<!--                                   <li><a href="{% url 'terms' %}">Terms</a></li>-->
+<!--                              </ul>-->
+<!--                         </li>-->
+<!--                         {% endcomment %}-->
+
+                         <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                         <li><a href="https://api.whatsapp.com/send?phone=00906462071"><i class="bi bi-telephone"></i>00905356462071</a></li>
+                    </ul>
+               </div>
+          </div>
+     </section>

@@ -1,0 +1,143 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Estates Fleet</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+{% include 'navbar.html' %}
+
+     <section>
+          <div class="container">
+               <div class="text-center">
+                    <h1>Fleet</h1>
+
+                    <br>
+
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, alias.</p>
+               </div>
+          </div>
+     </section>
+
+     <section class="section-background">
+          <div class="container">
+               <div class="row">
+                    {% for estate in object_List %}
+                    <div class="col-md-4 col-sm-4">
+                         <div class="courses-thumb courses-thumb-secondary">
+                              <div class="courses-top">
+                                   <div class="courses-image">
+                                        <img src="{{estate.img.url}}" class="img-responsive" alt="">
+                                   </div>
+                                   <div class="courses-date">
+                                        <span title="bedrooms"><i class="fa fa-user"></i>{{ estate.bedrooms }}</span>
+                                        <span title="bathrooms"><i class="fa fa-briefcase"></i>{{ estate.bathrooms }}</span>
+                                        <span title="area"><i class="fa fa-sign-out"></i>{{ estate.area }}</span>
+                                   </div>
+                              </div>
+
+                              <div class="courses-detail">
+                                   <h3><a href="#">{{ estate.address }}</a></h3>
+<!--                                   <p class="lead"><small>from</small> <strong>$99</strong> <small>per weekend</small></p>-->
+                                   <p>{{ estate.description }}.</p>
+                              </div>
+
+                              <div class="courses-info">
+                                   <button type="button" data-toggle="modal" data-target=".bs-example-modal" class="section-btn btn btn-primary btn-block">code: {{ estate.id }}</button>
+                              </div>
+                         </div>
+                    </div>
+                    {% endfor %}
+               </div>
+          </div>
+     </section>
+
+{% include 'footer.html' %}
+
+     <div class="modal fade bs-example-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                    <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                         <h4 class="modal-title" id="gridSystemModalLabel">Book Now</h4>
+                    </div>
+
+                    <div class="modal-body">
+                         <form action="#" id="contact-form">
+                              <div class="row">
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Pick-up location" required>
+                                   </div>
+
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Return location" required>
+                                   </div>
+                              </div>
+
+                              <div class="row">
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Pick-up date/time" required>
+                                   </div>
+
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Return date/time" required>
+                                   </div>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Enter full name" required>
+
+                              <div class="row">
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Enter email address" required>
+                                   </div>
+
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Enter phone" required>
+                                   </div>
+                              </div>
+                         </form>
+                    </div>
+
+                    <div class="modal-footer">
+                         <button type="button" class="section-btn btn btn-primary">Book Now</button>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <!-- SCRIPTS -->
+     <script src="{% static 'js/jquery.js' %}"></script>
+     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'js/smoothscroll.js' %}"></script>
+     <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>services</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+{% include 'navbar.html' %}
+     <section>
+          <div class="container">
+               <div class="text-center">
+                    <h1>Services</h1>
+
+                    <br>
+
+                    <p class="lead">The most important services of Elma Company.</p>
+               </div>
+          </div>
+     </section>
+
+     <section class="section-background">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                         <div class="courses-thumb courses-thumb-secondary">
+                              <div class="courses-top">
+                                   <div class="courses-image">
+                                        <img  width="512" height="512" src="{% static 'images/file.png' %}"  class="img-responsive" alt="" >
+                                   </div>
+                              </div>
+                              <div class="courses-detail">
+                                   <h3><a href="#">Official docs translation</a></h3>
+<!--                                   <p class="lead"><small>from</small> <strong>$99</strong> <small>per weekend</small></p>-->
+                                   <p>We will receive Turkish citizenship for you in less than 90 days.</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="courses-thumb courses-thumb-secondary">
+                              <div class="courses-top">
+                                   <div class="courses-image">
+                                        <img length="" src="{% static 'images/real-estate1.png' %}" class="img-responsive" alt="">
+                                   </div>
+                              </div>
+
+                              <div class="courses-detail">
+                                   <h3><a href="#">Real estate</a></h3>
+<!--                                   <p class="lead"><small>from</small> <strong>$99</strong> <small>per weekend</small></p>-->
+                                   <p>Search and buy property on the beautiful Mediterranean coast.</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="courses-thumb courses-thumb-secondary">
+                              <div class="courses-top">
+                                   <div class="courses-image">
+                                        <img  src="{% static 'images/passport.png' %}" class="img-responsive" alt="">
+                                   </div>
+                              </div>
+
+                              <div class="courses-detail">
+                                   <h3><a href="#">Turkey residency </a></h3>
+<!--                                   <p class="lead"><small>from</small> <strong>$99</strong> <small>per weekend</small></p>-->
+                                   <p>We will translate your official documents into Turkish.</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <section>
+          <div class="container">
+               <div class="text-center">
+                    <h1>About</h1>
+
+                    <br>
+
+                    <p class="lead">Elma is a real estate consultant in Alanya, Turkey.</p>
+               </div>
+          </div>
+     </section>
+
+{% include 'footer.html' %}
+
+     <div class="modal fade bs-example-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                    <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                         <h4 class="modal-title" id="gridSystemModalLabel">Book Now</h4>
+                    </div>
+
+                    <div class="modal-body">
+                         <form action="#" id="contact-form">
+                              <div class="row">
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Pick-up location" required>
+                                   </div>
+
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Return location" required>
+                                   </div>
+                              </div>
+
+                              <div class="row">
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Pick-up date/time" required>
+                                   </div>
+
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Return date/time" required>
+                                   </div>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Enter full name" required>
+
+                              <div class="row">
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Enter email address" required>
+                                   </div>
+
+                                   <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Enter phone" required>
+                                   </div>
+                              </div>
+                         </form>
+                    </div>
+
+                    <div class="modal-footer">
+                         <button type="button" class="section-btn btn btn-primary">Book Now</button>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <!-- SCRIPTS -->
+     <script src="{% static 'js/jquery.js' %}"></script>
+     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'js/smoothscroll.js' %}"></script>
+     <script src="{% static 'js/custom.js' %}"></script>
+
+
+</body>
+</html>
